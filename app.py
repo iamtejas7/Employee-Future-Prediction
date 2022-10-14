@@ -49,13 +49,13 @@ def predict():
         try:
             user_features.append(eval(i))
         except:
-            user_features.append(i)
+            user_features.append(i.strip().lower())
     # print(user_features)
 
-    education = {'Bachelors': 0, 'Masters': 1, 'PHD': 2}
-    city = {'Bangalore': 0, 'Pune': 1, 'New Delhi': 2}
-    gender = {'Male': 0, 'Female': 1}
-    ever_bench = {'No': 0, 'Yes': 1}
+    education = {'bachelors': 0, 'masters': 1, 'phd': 2}
+    city = {'bangalore': 0, 'pune': 1, 'new delhi': 2}
+    gender = {'male': 0, 'female': 1}
+    ever_bench = {'no': 0, 'yes': 1}
 
     try:
         user_features[0] = education[user_features[0]]
