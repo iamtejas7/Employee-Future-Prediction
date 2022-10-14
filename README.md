@@ -9,5 +9,9 @@
 
 create a new environment
 ```
-conda create -p venv python==3.9 -y
+conda create -p venv python==3.8 -y
 ```
+
+Please click on below link for checking the project on frontend web application which is deployed on heroku platform
+
+[Heroku_Frontend_Application](https://employees-future-prediction.herokuapp.com/)
