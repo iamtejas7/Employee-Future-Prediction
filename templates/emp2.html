@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Employee Future Prediction</h1>
+            <h5>This Project is created by Tejas Bankar</h5>
+            
+            <h3>Select Education</h3><select name="Education" id="Education" required="required">
+                <option value=0>Bachelors</option>
+                <option value=1>Masters</option>
+                <option value=2>PHD</option>
+            </select>
+            
+            <h3>Enter Joining Year of Employee?</h3><input type="number" name="JoiningYear" id="JoiningYear" required="required"/> 
+            
+            <h3>Select City</h3><select name="City" id="City" required="required">
+                <option value=0>Bangalore</option>
+                <option value=1>Pune</option>
+                <option value=2>New Delhi</option>
+            </select>
+            
+            <h3>Select Payment Tier</h3><select name="PaymentTier" id="PaymentTier" required="required">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+            </select>
+            
+          <h3>Enter Age of Employee</h3><input type="number" name="Age" id="Age" required="required"/> 
+                        
+          <h3>Select Gender</h3><select name="Gender" id="Gender" required="required">
+                <option value=0>Male</option>
+                <option value=1>Female</option>
+            </select>
+            
+            <h3>Ever Benched ?</h3><select name="EverBenched" id="EverBenched" required="required">
+                <option value=0>No</option>
+                <option value=1>Yes</option>
+            </select>
+            
+            <h3>Enter Years of Experience in cuurent Domain</h3><input type="number" name="ExperienceInCurrentDomain" id="ExperienceInCurrentDomain" required="required"/> 
+
+			<br><br><br>
+            <button id='predict_button' type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <br><h2>{{prediction_text}}</h2>
+
+        </form>
+    </div>
+
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+         #Education {
+          width: 120px;
+           height: 30px;
+           text-align: center;
+           border-radius: 14px;
+           font-size: 18px;
+        }
+        
+        #JoiningYear {
+            width: 99px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        
+        #City {
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        
+        #PaymentTier {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        
+        #Age {
+            width: 70px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+      
+        
+        #Gender {
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #EverBenched {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #ExperienceInCurrentDomain {
+            width: 70px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #predict_button {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;    
+            background-color: lightblue;
+        }
+        
+    </style>
+    
+</body>
+
+</html>
