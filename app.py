@@ -10,6 +10,7 @@ app = Flask(__name__)
 def employee():
     return render_template('emp2.html')
 
+# new change
 
 # api for postman testing
 # @app.route('/predict_api', methods = ['POST'])
